@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan - 3D Joglo Kertas</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="undangan.css">
+</head>
+<body>
+
+    <div id="cover-overlay" class="cover-overlay">
+        <div class="joglo-paper-card">
+            <div class="joglo-svg-container">
+                <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="100,10 150,40 50,40" fill="#a37034"/>
+                    <polygon points="150,40 190,80 10,80 50,40" fill="#c48b3f"/>
+                    <polygon points="80,20 120,20 130,40 70,40" fill="#875823"/>
+                    <rect x="85" y="80" width="30" height="35" fill="#5c3a13"/>
+                    <line x1="20" y1="80" x2="20" y2="115" stroke="#5c3a13" stroke-width="4"/>
+                    <line x1="180" y1="80" x2="180" y2="115" stroke="#5c3a13" stroke-width="4"/>
+                    <line x1="60" y1="80" x2="60" y2="115" stroke="#5c3a13" stroke-width="3"/>
+                    <line x1="140" y1="80" x2="140" y2="115" stroke="#5c3a13" stroke-width="3"/>
+                </svg>
+            </div>
+
+            <p class="sub-title">The Wedding Of</p>
+            <h1 class="couple-title">Bahrul & Shafa</h1>
+            
+            <div class="guest-box">
+                <p>Kepada Yth. Bapak/Ibu/Saudara/i:</p>
+                <h3 id="guest-name">Himpunan TI Periode 2025/2026</h3>
+            </div>
+
+            <button id="btn-open" class="btn-open">
+                <i class="fa-solid fa-envelope-open"></i> Buka Undangan
+            </button>
+        </div>
+    </div>
+
+    <div id="main-content" class="main-content hidden">
+        
+        <section class="hero-section">
+            <div class="hero-card">
+                <p class="subtitle">Walimatul 'Ursy</p>
+                <h1 class="couple-name">Bahrul & Shafa</h1>
+                <p class="wedding-date"><i class="fa-regular fa-calendar-check"></i> Sabtu, 24 Oktober 2030</p>
+            </div>
+        </section>
+
+        <section class="countdown-section">
+            <h2>Menuju Hari Bahagia</h2>
+            <div class="timer-grid">
+                <div class="time-box"><span id="days">03</span><p>Hari</p></div>
+                <div class="time-box"><span id="hours">12</span><p>Jam</p></div>
+                <div class="time-box"><span id="minutes">59</span><p>Menit</p></div>
+                <div class="time-box"><span id="seconds">59</span><p>Detik</p></div>
+            </div>
+        </section>
+
+        <section class="couple-section">
+            <div class="couple-card">
+                <div class="avatar"><i class="fa-solid fa-user-tie"></i></div>
+                <h3>Mohammad Bahrul Ulum</h3>
+                <p>Putra dari Bpk. Nur Rochim & Ibu Siti Nasukhah</p>
+            </div>
+            <div class="heart-divider"><i class="fa-solid fa-heart"></i></div>
+            <div class="couple-card">
+                <div class="avatar"><i class="fa-solid fa-user-dress"></i></div>
+                <h3>Ervita Zharfan Aulia Seftiani</h3>
+                <p>Putri dari Bpk. Ervin Patriono & Ibu Utami</p>
+            </div>
+        </section>
+
+        <section class="event-section">
+            <h2>Rangkaian Acara</h2>
+            
+            <div class="event-card">
+                <h3><i class="fa-solid fa-ring"></i> Akad Nikah</h3>
+                <p><i class="fa-regular fa-clock"></i> 08.00 - 10.00 WIB</p>
+                <p><i class="fa-solid fa-location-dot"></i> Masjid Al Akbar, Surabaya</p>
+            </div>
+
+            <div class="event-card">
+                <h3><i class="fa-solid fa-wine-glass"></i> Resepsi</h3>
+                <p><i class="fa-regular fa-clock"></i> 11.00 - 14.00 WIB</p>
+                <p><i class="fa-solid fa-location-dot"></i> Vasa Hotel, Surabaya</p>
+            </div>
+
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.659616223789!2d112.6962463!3d-7.2866448!2m3!1f0!f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fc13ad23f705%3A0xba6949f88ceb7e1c!2sVasa%20Hotel%20Surabaya!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" width="100%" height="250" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+
+        <section class="rsvp-section">
+            <h2>Konfirmasi Kehadiran (RSVP)</h2>
+            <form id="rsvp-form" class="rsvp-form">
+                <input type="text" id="rsvp-name" placeholder="Nama Anda" required>
+                <select id="rsvp-status" required>
+                    <option value="">-- Pilih Kehadiran --</option>
+                    <option value="Hadir">Hadir</option>
+                    <option value="Tidak Hadir">Tidak Hadir</option>
+                </select>
+                <textarea id="rsvp-message" placeholder="Ucapan & Doa Retu" rows="3" required></textarea>
+                <button type="submit" class="btn-submit"><i class="fa-solid fa-paper-plane"></i> Kirim Konfirmasi</button>
+            </form>
+
+            <div class="messages-box">
+                <h3>Ucapan & Doa</h3>
+                <div id="messages-list" class="messages-list">
+                </div>
+            </div>
+        </section>
+
+        <section class="gift-section">
+            <h2>Amplop Digital & Hadiah</h2>
+            <p>Doa restu Anda merupakan karunia terindah bagi kami. Namun jika ingin memberi hadiah, Anda dapat mengirimkannya melalui:</p>
+            
+            <div class="bank-card">
+                <i class="fa-solid fa-credit-card bank-icon"></i>
+                <div>
+                    <h4>Bank BCA</h4>
+                    <p>No. Rekening: <strong>1234567890</strong></p>
+                    <p>a.n. Mohammad Bahrul Ulum</p>
+                </div>
+                <button class="btn-copy" onclick="copyBankNumber('1234567890')"><i class="fa-regular fa-copy"></i> Salin</button>
+            </div>
+            
+            <div class="bank-card">
+                <i class="fa-solid fa-wallet bank-icon"></i>
+                <div>
+                    <h4>Bank Mandiri</h4>
+                    <p>No. Rekening: <strong>0987654321</strong></p>
+                    <p>a.n. Ervita Zharfan Aulia Seftiani</p>
+                </div>
+                <button class="btn-copy" onclick="copyBankNumber('0987654321')"><i class="fa-regular fa-copy"></i> Salin</button>
+            </div>
+        </section>
+
+        <footer>
+            <p>Terima Kasih Atas Doa & Restu Anda</p>
+            <small>Bahrul & Shafa Wedding © 2026</small>
+        </footer>
+    </div>
+
+    <audio id="bg-music" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+    <button id="music-control" class="music-control hidden" onclick="toggleMusic()">
+        <i id="music-icon" class="fa-solid fa-music"></i>
+    </button>
+
+    <script src="undangan.js"></script>
+</body>
+</html>
